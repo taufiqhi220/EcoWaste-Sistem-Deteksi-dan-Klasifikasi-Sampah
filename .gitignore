@@ -1,0 +1,25 @@
+# Lingkungan Virtual Python
+Backend-EcoWaste/env/
+venv/
+*.venv
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# File Log
+*.log
+Backend-EcoWaste/app.log
+app.log # Jika ada log di root
+
+# Dataset Besar (WAJIB DIABAIKAN JIKA >100MB)
+Ecowaste-Dataset/
+
+# File spesifik OS
+.DS_Store
+Thumbs.db
+
+# File spesifik IDE/editor (opsional)
+.vscode/
+.idea/

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoWaste - Smart Waste Classification</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">🌱 EcoWaste</a>
+                <ul class="nav-links">
+                    <li><a href="#home-page">Home</a></li>
+                    <li><a href="#classify">Classify</a></li>
+                    <li><a href="#categories">Learn</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <!-- Home Page -->
+            <div id="home-page">
+                <section class="hero">
+                    <h1>EcoWaste : Smart Waste Classification</h1>
+                    <p>Learn to sort waste properly with your hands!</p>
+                    <a href="#classify" class="cta-button">Try Classifier</a>
+                </section>
+            
+            <div id="categories">
+                <section class="categories">
+                    <h2>Waste Categories</h2>
+                    <div class="category-grid">
+                        <div class="category-card" onclick="showEducation('organic')">
+                            <div class="category-icon">🥬</div>
+                            <h3>Sampah Organik</h3>
+                            <p>Sisa makanan, limbah halaman, dan bahan yang dapat terurai secara alami</p>
+                            <button class="learn-more">Learn More</button>
+                        </div>
+                        <div class="category-card" onclick="showEducation('inorganic')">
+                            <div class="category-icon">🗂️</div>
+                            <h3>Sampah Kertas</h3>
+                            <p>Bahan kertas yang dapat didaur ulang yang harus dijaga agar tetap kering dan bersih agar dapat digunakan kembali secara efektif.</p>
+                            <button class="learn-more">Learn More</button>
+                        </div>
+                        <div class="category-card" onclick="showEducation('b3')">
+                            <div class="category-icon">🧴</div>
+                            <h3>Sampah Plastik</h3>
+                            <p>Sampah plastik yang tidak dapat terurai yang memerlukan daur ulang atau pembuangan khusus.</p>
+                            <button class="learn-more">Learn More</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="classifier" id="classify">
+                    <h2>Waste Classifier</h2>
+                    <p>Upload an image to classify your waste automatically</p>
+
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">📸</div>
+                        <p>Click to upload or drag and drop an image</p>
+                        <input type="file" id="fileInput" class="file-input" accept="image/*">
+                    </div>
+
+                    <div class="loading" id="loading">
+                        <div class="spinner"></div>
+                        <p>Analyzing image...</p>
+                    </div>
+
+                    <div class="result-container" id="resultContainer">
+                        <img id="resultImage" class="result-image" alt="Uploaded image">
+                        <div class="result-text" id="resultText"></div>
+                        <div class="confidence" id="confidence"></div>
+                    </div>
+                </section>
+            </div>
+
+                <!-- Call to Action Section -->
+                <section class="cta-section">
+                    <div class="cta-content">
+                        <h2>🌍 Ayo Mengolah Sampah dengan Baik!</h2>
+                        <p class="cta-subtitle">Bersama-sama kita ciptakan lingkungan yang lebih bersih dan sehat untuk
+                            generasi mendatang</p>
+
+                        <div class="benefits-grid">
+                            <div class="benefit-card">
+                                <div class="benefit-icon">🌱</div>
+                                <h3>Lingkungan Sehat</h3>
+                                <p>Mengurangi polusi udara, air, dan tanah untuk ekosistem yang lebih seimbang</p>
+                            </div>
+                            <div class="benefit-card">
+                                <div class="benefit-icon">💰</div>
+                                <h3>Ekonomi Berkelanjutan</h3>
+                                <p>Menciptakan lapangan kerja baru dan mengurangi biaya pengelolaan sampah</p>
+                            </div>
+                            <div class="benefit-card">
+                                <div class="benefit-icon">♻️</div>
+                                <h3>Sumber Daya Terbarukan</h3>
+                                <p>Mengubah sampah menjadi kompos, energi, dan produk daur ulang yang bermanfaat</p>
+                            </div>
+                            <div class="benefit-card">
+                                <div class="benefit-icon">🏘️</div>
+                                <h3>Komunitas Bersih</h3>
+                                <p>Meningkatkan kualitas hidup dan kebanggaan masyarakat terhadap lingkungan</p>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <button class="action-btn primary" onclick="scrollToClassifier()">Mulai Klasifikasi</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Education Pages -->
+            <div id="organic-page" class="education-page">
+                <button class="back-button" onclick="showHome()">← Back to Home</button>
+                <div class="education-content">
+                    <h2>🥬 Sampah Organik</h2>
+                    <p>
+                        Sampah organik adalah jenis sampah yang berasal dari makhluk hidup, seperti sisa makanan,
+                        dedaunan, dan sisa rumah tangga dan dapat terurai secara alami dengan bantuan mikroorganisme.
+                    </p>
+
+                    <!-- ✅ Apa itu Sampah Organik -->
+                    <h3>Apa Itu Sampah Organik?</h3>
+                    <p>
+                        Sampah organik mencakup bahan-bahan yang berasal dari tumbuhan atau hewan dan dapat membusuk
+                        secara alami. Jika dikelola dengan benar, sampah ini tidak perlu dibuang ke tempat pembuangan
+                        akhir (TPA) dan bisa diubah menjadi pupuk alami.
+                    </p>
+                    <img src="image\Contoh Sampah Organik.jpg"
+                        alt="Contoh Sampah Organik"
+                        style="width:100%; max-width:500px; border-radius:10px; margin:1rem 0;" />
+
+                    <!-- ✅ Contoh -->
+                    <h3>Contoh Sampah Organik:</h3>
+                    <div class="tips-list">
+                        <ul>
+                            <li>🍌 Kulit buah dan sayuran</li>
+                            <li>☕ Ampas kopi dan kantong teh bekas</li>
+                            <li>🥚 Cangkang telur dan kulit kacang</li>
+                            <li>🌿 Potongan rumput dan daun-daunan</li>
+                            <li>🍽️ Sisa makanan (nasi, sayur, roti, dll)</li>
+                            <li>🧻 Tisu dan serbet bekas pakai</li>
+                        </ul>
+                    </div>
+
+                    <!-- ✅ Langkah-langkah Pengolahan -->
+                    <h3>Cara Pengelolaan yang Benar</h3>
+                    <p>
+                        Cara terbaik untuk mengelola sampah organik adalah dengan <strong>mengomposkannya</strong>.
+                        Kompos adalah hasil penguraian sampah organik yang dapat digunakan sebagai pupuk alami.Meskipun
+                        sampah alami dapat terurai secara alami,
+                        tetapi apabila kuantitasnya banyak dan bertumpuk di alam, maka sampah ini juga akan bisa merusak
+                        lingkungan karena proses penguraiannya
+                        membutuhkan waktu lebih lama. Beberapa langkah lainya yang dapat dilakukan :
+                    </p>
+                    <img src="image\Proses Kompos di Rumah.jpg"
+                        alt="Proses Kompos di Rumah"
+                        style="width:100%; max-width:500px; border-radius:10px; margin:1rem 0;" />
+                    <p>
+                        📌 <strong>Pisahkan Sampah</strong>
+                    </p>
+                    <p>
+                        Pisahkan sampah organik dari jenis sampah lainnya seperti sampah anorganik (plastik, logam, dll)
+                        dan sampah B3 (beracun dan berbahaya),
+                        agar tidak tercemar dan bisa diolah kembali
+                    </p>
+                    <p>
+                        📌 <strong>Kumpulkan Bahan Organik</strong>
+                    </p>
+                    <p>
+                        Contoh sampah organik yang bisa diolah seperti sisa sayur dan buah, ampas kopi dan teh, daun dan
+                        rumput kering,
+                        kulit telur, nasi basi dan lain lain. Hindari mencampur daging, produk susu, atau minyak karena
+                        dapat menimbulkan bau dan mengundang hama.
+                    </p>
+                    <p>
+                        📌 <strong>Manfaatkan Untuk Kompos</strong>
+                    </p>
+                    <div class="olah-list">
+                        <ul>
+                            <li>Gunakan wadah atau lubang kompos di halaman rumah</li>
+                            <li>Campur bahan basah (hijau) dan bahan kering (coklat) secara seimbang</li>
+                            <li>Aduk kompos secara rutin agar proses penguraian berjalan lancar</li>
+                            <li>Jaga kelembaban agar tidak terlalu kering atau basah</li>
+                            <li>Tunggu 1–3 bulan hingga menjadi kompos</li>
+                            <li>Hindari daging, produk susu, dan makanan berminyak agar tidak menimbulkan bau atau hama
+                            </li>
+                        </ul>
+                    </div>
+                    <p>
+                        📌 <strong>Manfaatkan lubang biopori</strong>
+                    </p>
+                    <p>
+                        Sampah dimasukkan ke dalam lubang silindris kecil yang dibuat secara vertikal ke dalam tanah.
+                        Cara ini tidak hanya membantu mengurangi limbah, tetapi juga menyuburkan tanah secara langsung
+                        tanpa memerlukan proses pengolahan lanjutan seperti pengadukan atau pemindahan kompos dan
+                        mencegah banjir
+                    </p>
+
+                    <!-- ✅ Manfaat Lingkungan -->
+                    <h3>Manfaat Bagi Lingkungan</h3>
+                    <p>
+                        Dalam kuantitas normal dan tidak berlebihan, sampah memiliki manfaat dan dapat digunakan kembali
+                        untuk kebutuhan tertentu.
+                        Apabila dikelola secara bijak dan tepat, sampah akan mendatangkan keuntungan bagi manusia.
+                        Dengan mengelola sampah
+                        organik secara tepat, kita bisa memberikan banyak manfaat bagi lingkungan:
+                    </p>
+                    <div class="tips-list">
+                        <ul>
+                            <li>♻️ <strong>Mengurangi volume sampah di TPA</strong> hingga 30%</li>
+                            <li>🌱 Menghasilkan pupuk kompos yang baik untuk tanaman</li>
+                            <li>🌍 Menurunkan emisi gas rumah kaca seperti metana</li>
+                            <li>💧 Memperbaiki struktur tanah dan meningkatkan daya serap air</li>
+                            <li>⚡ Bermanfaat juga sebagai sumber listrik melalui pengolahan biogas.</li>
+                        </ul>
+                    </div>
+
+                    <!-- ✅ Ajak Beraksi -->
+                    <p style="margin-top: 2rem;">
+                        🧠 <strong>Tahukah kamu?</strong> Kompos dari sampah organik rumah tangga bisa menggantikan
+                        pupuk kimia dan membantu pertanian lebih ramah lingkungan.
+                    </p>
+                    <p>
+                        🌿 Yuk mulai memilah sampah dari rumah, dan ubah sampah organik menjadi sumber daya baru yang
+                        bermanfaat!
+                    </p>
+                </div>
+            </div>
+
+            <div id="inorganic-page" class="education-page">
+                <button class="back-button" onclick="showHome()">← Back to Home</button>
+                <div class="education-content">
+                    <h2>📄 Sampah Kertas</h2>
+                    <p>
+                        Sampah kertas adalah jenis sampah anorganik yang berasal dari produk berbahan dasar serat kayu,
+                        seperti koran, buku, kardus, dan kemasan makanan. Meskipun dapat terurai, prosesnya memerlukan
+                        waktu cukup lama, sehingga penting untuk dikelola dengan bijak agar tidak mencemari lingkungan.
+                    </p>
+
+                    <!-- ✅ Apa itu Sampah Kertas -->
+                    <h3>Apa Itu Sampah Kertas?</h3>
+                    <p>
+                        Sampah kertas mencakup semua limbah yang berasal dari bahan berbasis selulosa seperti kertas,
+                        karton, dan produk turunannya. Kertas bisa didaur ulang menjadi produk baru, sehingga mengurangi
+                        kebutuhan akan bahan baku baru dan menekan jumlah sampah di tempat pembuangan akhir (TPA).
+                    </p>
+                    <img src="image\Contoh Sampah Kertas.jpg"
+                        alt="Contoh Sampah Kertas"
+                        style="width:100%; max-width:500px; border-radius:10px; margin:1rem 0;" />
+
+                    <!-- ✅ Contoh -->
+                    <h3>Contoh Sampah Kertas:</h3>
+                    <div class="tips-list">
+                        <ul>
+                            <li>📰 Koran, majalah, dan brosur bekas</li>
+                            <li>📦 Kardus dan kemasan makanan kertas</li>
+                            <li>📚 Buku dan catatan yang tidak terpakai</li>
+                            <li>📄 Kertas cetak, dokumen, dan lembar kerja</li>
+                            <li>🧻 Tisu kering bekas (tidak terlalu kotor)</li>
+                            <li>🎁 Kertas pembungkus kado atau hadiah</li>
+                        </ul>
+                    </div>
+
+                    <!-- ✅ Langkah-langkah Pengolahan -->
+                    <h3>Cara Pengelolaan yang Benar</h3>
+                    <p>
+                        Cara terbaik untuk mengelola sampah kertas adalah dengan <strong>mendaur ulang</strong> atau
+                        memanfaatkannya kembali. Daur ulang kertas bisa menghemat pohon, air, dan energi. Berikut
+                        beberapa langkah yang bisa dilakukan:
+                    </p>
+                    <img src="image\Proses Daur Ulang Kertas.jpg"
+                        alt="Proses Daur Ulang Kertas"
+                        style="width:100%; max-width:500px; border-radius:10px; margin:1rem 0;" />
+                    <p>📌 <strong>Pisahkan Sampah Kertas</strong></p>
+                    <p>
+                        Pisahkan kertas dari sampah basah, plastik, atau logam. Usahakan agar kertas tetap kering dan
+                        tidak tercemar minyak atau makanan agar bisa didaur ulang.
+                    </p>
+                    <p>📌 <strong>Kumpulkan dan Simpan dengan Baik</strong></p>
+                    <p>
+                        Kumpulkan kertas bekas di tempat khusus. Gunakan kardus atau kontainer tertutup untuk
+                        menghindari kerusakan oleh air atau hama.
+                    </p>
+                    <p>📌 <strong>Manfaatkan Kembali</strong></p>
+                    <div class="olah-list">
+                        <ul>
+                            <li>Gunakan kertas bekas satu sisi untuk menulis atau mencetak ulang</li>
+                            <li>Ubah kardus dan majalah bekas menjadi kerajinan tangan</li>
+                            <li>Jual atau donasikan ke bank sampah atau tempat daur ulang</li>
+                            <li>Jika memungkinkan, buat bubur kertas untuk produk daur ulang seperti pot bunga, topeng,
+                                dan hiasan</li>
+                        </ul>
+                    </div>
+
+                    <!-- ✅ Manfaat Lingkungan -->
+                    <h3>Manfaat Bagi Lingkungan</h3>
+                    <p>
+                        Dengan mendaur ulang atau mengelola sampah kertas secara benar, kita bisa memberikan dampak
+                        besar bagi lingkungan. Berikut beberapa manfaatnya:
+                    </p>
+                    <div class="tips-list">
+                        <ul>
+                            <li>🌳 <strong>Menghemat pohon</strong> sebagai bahan baku kertas baru</li>
+                            <li>💧 Mengurangi penggunaan air dalam proses pembuatan kertas</li>
+                            <li>⚡ Menghemat energi hingga 60% dibandingkan membuat kertas dari awal</li>
+                            <li>📉 Mengurangi volume sampah kertas di TPA</li>
+                            <li>🌍 Menurunkan emisi karbon dari proses produksi kertas baru</li>
+                        </ul>
+                    </div>
+
+                    <!-- ✅ Ajak Beraksi -->
+                    <p style="margin-top: 2rem;">
+                        🧠 <strong>Tahukah kamu?</strong> Setiap 1 ton kertas daur ulang bisa menyelamatkan hingga 17
+                        pohon!
+                    </p>
+                    <p>
+                        📄 Yuk mulai pisahkan dan manfaatkan kembali sampah kertas dari sekarang, agar lingkungan kita
+                        tetap hijau dan lestari.
+                    </p>
+                </div>
+            </div>
+
+            <div id="b3-page" class="education-page">
+                <button class="back-button" onclick="showHome()">← Back to Home</button>
+                <div class="education-content">
+                    <h2>🧴 Sampah Plastik</h2>
+                    <p>
+                        Sampah plastik adalah limbah yang berasal dari produk berbahan dasar plastik seperti kantong,
+                        botol, kemasan makanan, dan peralatan sekali pakai. Plastik tidak mudah terurai dan bisa
+                        mencemari lingkungan selama ratusan tahun, sehingga perlu penanganan khusus.
+                    </p>
+
+                    <!-- ✅ Apa itu Sampah Plastik -->
+                    <h3>Apa Itu Sampah Plastik?</h3>
+                    <p>
+                        Sampah plastik merupakan jenis sampah anorganik yang sangat umum digunakan dalam kehidupan
+                        sehari-hari. Karena sifatnya yang ringan, kuat, dan tahan lama, plastik banyak digunakan tetapi
+                        sayangnya sering dibuang sembarangan. Tanpa pengelolaan yang tepat, plastik bisa mencemari
+                        tanah, air, dan bahkan rantai makanan.
+                    </p>
+                    <img src="image\Contoh Sampah Plastik.png"
+                        alt="Contoh Sampah Plastik"
+                        style="width:100%; max-width:500px; border-radius:10px; margin:1rem 0;" />
+
+                    <!-- ✅ Contoh -->
+                    <h3>Contoh Sampah Plastik:</h3>
+                    <div class="tips-list">
+                        <ul>
+                            <li>🛍️ Kantong plastik belanja</li>
+                            <li>🥤 Botol air mineral dan minuman kemasan</li>
+                            <li>🍱 Wadah makanan sekali pakai (styrofoam, plastik)</li>
+                            <li>🍬 Kemasan snack dan bungkus makanan</li>
+                            <li>🧼 Botol sabun, sampo, dan deterjen</li>
+                            <li>🧃 Sedotan dan gelas plastik</li>
+                        </ul>
+                    </div>
+
+                    <!-- ✅ Langkah-langkah Pengolahan -->
+                    <h3>Cara Pengelolaan yang Benar</h3>
+                    <p>
+                        Sampah plastik dapat didaur ulang, tetapi harus dipilah dan dibersihkan terlebih dahulu. Berikut
+                        beberapa langkah penting dalam pengelolaan sampah plastik:
+                    </p>
+                    <img src="image\Daur Ulang Sampah Plastik.jpg" alt="Daur Ulang Sampah Plastik"
+                        style="width:100%; max-width:500px; border-radius:10px; margin:1rem 0;" />
+                    <p>📌 <strong>Pilah Sampah Plastik</strong></p>
+                    <p>
+                        Pisahkan plastik dari sampah organik dan B3. Kelompokkan sesuai jenisnya (botol, kemasan,
+                        kantong) untuk memudahkan proses daur ulang.
+                    </p>
+                    <p>📌 <strong>Cuci dan Keringkan</strong></p>
+                    <p>
+                        Cuci plastik bekas makanan atau minuman agar bersih dari sisa makanan dan tidak menimbulkan bau.
+                        Plastik yang bersih lebih mudah didaur ulang.
+                    </p>
+                    <p>📌 <strong>Kirim ke Bank Sampah atau TPS 3R</strong></p>
+                    <div class="olah-list">
+                        <ul>
+                            <li>Gunakan tempat penampungan sementara khusus plastik</li>
+                            <li>Kirim ke bank sampah atau tempat pengolahan daur ulang (TPS 3R)</li>
+                            <li>Gunakan kembali kantong atau botol plastik jika masih layak</li>
+                            <li>Kurangi penggunaan plastik sekali pakai, ganti dengan alternatif ramah lingkungan</li>
+                        </ul>
+                    </div>
+
+                    <!-- ✅ Manfaat Lingkungan -->
+                    <h3>Manfaat Bagi Lingkungan</h3>
+                    <p>
+                        Pengelolaan sampah plastik yang baik tidak hanya mengurangi pencemaran, tetapi juga memberikan
+                        manfaat jangka panjang bagi bumi:
+                    </p>
+                    <div class="tips-list">
+                        <ul>
+                            <li>🌊 <strong>Mencegah pencemaran laut</strong> dan melindungi biota laut</li>
+                            <li>♻️ Mendukung industri daur ulang plastik</li>
+                            <li>🌍 Mengurangi emisi karbon dari produksi plastik baru</li>
+                            <li>⚠️ Mengurangi risiko mikroplastik yang masuk ke rantai makanan</li>
+                            <li>💡 Daur ulang plastik bisa menghasilkan produk baru seperti paving block, tas daur
+                                ulang, dan furnitur</li>
+                        </ul>
+                    </div>
+
+                    <!-- ✅ Ajak Beraksi -->
+                    <p style="margin-top: 2rem;">
+                        🧠 <strong>Tahukah kamu?</strong> Plastik bisa tetap berada di lingkungan selama lebih dari 500
+                        tahun tanpa terurai!
+                    </p>
+                    <p>
+                        🧴 Yuk mulai kurangi, pisahkan, dan daur ulang plastik dari sekarang untuk melindungi bumi dan
+                        masa depan!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌱 EcoWaste</h3>
+                    <p>Aplikasi klasifikasi sampah untuk lingkungan yang lebih bersih dan berkelanjutan.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Kontak Kami</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>info@ecosort.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <span>+62 812-3456-7890</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Depok, Jawa Barat, Indonesia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Tim Pengembang</h4>
+                    <div class="team-info">
+                        <div class="team-member">
+                            <strong>ML Engineer :</strong> Taufiq Hidayat,
+                            <div>Aulia Putri Fanani</div>
+                        </div>
+                        <div class="team-member">
+                            <strong>Front-End :</strong> Aulia Putri Fanani
+                        </div>
+
+                        <div class="team-member">
+                            <strong>Back-End :</strong> Taufiq Hidayat
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Dukungan</h4>
+                    <div class="support-links">
+                        <a href="#" class="support-link">FAQ</a>
+                        <a href="#" class="support-link">Panduan Penggunaan</a>
+                        <a href="#" class="support-link">Lapor Masalah</a>
+                        <a href="#" class="support-link">Saran & Kritik</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 EcoWaste. Dibuat dengan ❤️ untuk lingkungan yang lebih baik.</p>
+                <div class="footer-links">
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="#">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
