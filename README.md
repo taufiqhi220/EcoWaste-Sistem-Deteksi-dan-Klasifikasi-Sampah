@@ -1,4 +1,4 @@
-# EcoWaste: EcoWaste Sistem Deteksi dan Klasifikasi Sampah dari Gambar untuk Edukasi Daur Ulang
+# EcoWaste: Sistem Deteksi dan Klasifikasi Sampah dari Gambar untuk Edukasi Daur Ulang
 
 ## ♻️ Ringkasan Proyek
 
