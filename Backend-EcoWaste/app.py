@@ -46,7 +46,10 @@ def preprocess_image(image_bytes, target_size=(IMG_SIZE, IMG_SIZE)):
 def dapatkan_info_edukasi(nama_kelas):
     if nama_kelas == "Kertas":
         return "Kertas dapat didaur ulang menjadi kertas baru, kardus, atau tisu. Pisahkan dari sampah basah."
-    # ... (info edukasi lainnya) ...
+    elif nama_kelas == "Organik":
+        return "Sampah organik dapat didaur ulang menjadi kompos alami yang bermanfaat bagi lingkungan."
+    elif nama_kelas == "Plastik":
+        return "Plastik dapat didaur ulang menjadi ecobrick, ember, atau tas ramah lingkungan."
     else:
         return "Info daur ulang spesifik belum tersedia untuk jenis sampah ini."
 
