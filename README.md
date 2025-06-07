@@ -75,8 +75,8 @@ Biarkan terminal ini tetap berjalan. Server akan aktif di `http://127.0.0.1:5000
 ## 👥 Tim Pengembang
 **ID Tim Capstone Project: CC25-CR368**
 * **ML Engineer**: Taufiq Hidayat, Aulia Putri Fanani
-* **Front-End**: Aulia Putri Fanani (MC006D5X1464) [**LinkedIn**](https://www.linkedin.com/in/auliaputrifanai) | [**GitHub**](https://github.com/Aulialiap)
-* **Back-End**: Taufiq Hidayat (MC135D5Y1886) [**LinkedIn**](https://www.linkedin.com/in/taufiqhi220/) | [**GitHub**](https://github.com/taufiqhi220)
+* **Front-End**: Aulia Putri Fanani (MC006D5X1464) [**Linkedin**](https://www.linkedin.com/in/auliaputrifanai) | [**GitHub**](https://github.com/Aulialiap)
+* **Back-End**: Taufiq Hidayat (MC135D5Y1886) [**Linkedin**](https://www.linkedin.com/in/taufiqhi220/) | [**GitHub**](https://github.com/taufiqhi220)
 
 ## 🙏 Referensi dan Kredit
 
