@@ -1,6 +1,4 @@
-# EcoWaste: Sistem Deteksi dan Klasifikasi Sampah
-
-**ID Tim: CC25-CR368**
+# EcoWaste: EcoWaste Sistem Deteksi dan Klasifikasi Sampah dari Gambar untuk Edukasi Daur Ulang
 
 ## ♻️ Ringkasan Proyek
 
@@ -23,7 +21,7 @@ EcoWaste adalah solusi berbasis kecerdasan buatan yang dapat mengenali jenis sam
 
 Pastikan perangkat Anda memenuhi persyaratan berikut sebelum instalasi:
 
-* **Python**: Versi 3.8 hingga 3.11
+* **Python**: Versi 3.8 hingga 3.11 (atau lebih tinggi support dengan Tensorflow)
 * **RAM**: Minimal 4 GB (8 GB direkomendasikan)
 * **Penyimpanan**: Minimal 2 GB ruang kosong
 * **Browser Web**: Google Chrome, Mozilla Firefox, atau sejenisnya.
@@ -75,10 +73,10 @@ Biarkan terminal ini tetap berjalan. Server akan aktif di `http://127.0.0.1:5000
 3.  Aplikasi siap digunakan untuk mengunggah dan mengklasifikasi gambar sampah.
 
 ## 👥 Tim Pengembang
-
+**ID Tim Capstone Project: CC25-CR368**
 * **ML Engineer**: Taufiq Hidayat, Aulia Putri Fanani
-* **Front-End**: Aulia Putri Fanani
-* **Back-End**: Taufiq Hidayat
+* **Front-End**: Aulia Putri Fanani (MC006D5X1464) [**LinkedIn**](https://www.linkedin.com/in/auliaputrifanai) | [**GitHub**](https://github.com/Aulialiap)
+* **Back-End**: Taufiq Hidayat (MC135D5Y1886) [**LinkedIn**](https://www.linkedin.com/in/taufiqhi220/) | [**GitHub**](https://github.com/taufiqhi220)
 
 ## 🙏 Referensi dan Kredit
 
